@@ -12,6 +12,8 @@ def play(nivelDif):
             path = easy()
             while True:
                 for i in range(2):
+                    if len(path) > 20:
+                        path.pop()
                     print(f'''
                         Gire o dado jogador {i+1}:
                         Pressione Enter para girar
@@ -23,7 +25,7 @@ def play(nivelDif):
                         {valorDado}
                         Pressione enter para continuar
                         ''')
-                    if path[19] == 1 or path[19] == 2:
+                    if dicePlayer1+ valorDado >= 19 or dicePlayer2 + valorDado >= 19:
                         print('O jogo acabou, o jogador', path[19], 'ganhou!')
                         return
                     if i == 0:
