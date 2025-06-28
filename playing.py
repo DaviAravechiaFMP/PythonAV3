@@ -23,14 +23,14 @@ def play(nivelDif):
                         {valorDado}
                         Pressione enter para continuar
                         ''')
+                    if path[19] == 1 or path[19] == 2:
+                        print('O jogo acabou, o jogador', path[19], 'ganhou!')
+                        return
                     if i == 0:
                         dicePlayer1 += valorDado
                         cont = 0
                         if 1 in path:
                             path[path.index(1)] = '_'
-                        if path.index(1) == 20 or path.index(1)> 20:
-                            path[20] = 1
-                            break
                         path.insert(dicePlayer1 -1, 1)
                         print(' '.join(str(p) for p in path)) #entender como funciona, solução do chat
                         # print(' '.join(path))
@@ -39,9 +39,6 @@ def play(nivelDif):
                         dicePlayer2 += valorDado
                         if 2 in path:
                             path[path.index(2)] = '_'
-                        if path.index(2) == 20 or path.index(2)> 20:
-                            path[20] = 2
-                            break
                         path.insert(dicePlayer2 -1, 2)
                         print(' '.join(str(p) for p in path)) #entender como funciona, solução do chat
                         # print(' '.join(path))

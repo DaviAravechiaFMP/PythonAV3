@@ -20,7 +20,7 @@ Díficil D
                     break
         else:
             print('Insira um valor válido')
-            nivelDif = input()
+            nivelDif = input().upper()
     os.system('cls')
     # loading()
     os.system('cls')
