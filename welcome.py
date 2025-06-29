@@ -22,6 +22,6 @@ Díficil D
             print('Insira um valor válido')
             nivelDif = input().upper()
     os.system('cls')
-    # loading()
+    loading()
     os.system('cls')
     return(nivelDif)
